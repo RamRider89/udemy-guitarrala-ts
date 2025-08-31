@@ -1,4 +1,13 @@
-export const db = [
+
+type TGuitar = {
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+    price: number;
+}
+
+export const db: TGuitar[] = [
   {
       id: 1,
       name: 'Lukather',

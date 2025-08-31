@@ -1,8 +1,21 @@
+type TGuitar = {
+    id: number;
+    name: string;
+    image: string;
+    description: string;
+    price: number;
+}
+
+type TGuitarProps = {
+    guitar: TGuitar, 
+    addToCart: (item: TGuitar) => void }
+}
+
 import { Fragment } from 'react'
 
-function Guitar({guitar, addToCart}) {
+function Guitar({guitar, addToCart} : TGuitarProps) {
 
-    const { id, name, image, description, price } = guitar;
+    const {  name, image, description, price } = guitar;
 
     const handleClick = (id) => {
         console.log(id);
